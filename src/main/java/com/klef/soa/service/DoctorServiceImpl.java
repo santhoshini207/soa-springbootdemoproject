@@ -69,5 +69,10 @@ public class DoctorServiceImpl implements DoctorService
   public List<Doctor> displayDoctorByGender(String gender) {
     return repo.findByGender(gender);
   }
+  
+  @Override
+  public Long doctorCount() {
+	  return repo.count();
+  }
 
 }
